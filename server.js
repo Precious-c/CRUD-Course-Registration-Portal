@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const MongoClient = require('mongodb').MongoClient
 const PORT = 3131
+require('dotenv').config()
 
 app.use(express.urlencoded({ extended: false }))
 app.use(express.static('public'))
@@ -10,11 +11,11 @@ app.set('view engine', 'ejs')
 
 //Database credentials -- 
 let db
+    dbConnectionStr = process.env.DB_STRING,
     dbName = 'course_registration_b'
-    DB_STRING = 'mongodb+srv://Coursereg:coursereg@cluster0.xugpkpc.mongodb.net/?retryWrites=true&w=majority'
 
 //Connecting to database
-MongoClient.connect(DB_STRING)
+MongoClient.connect(dbConnectionStr)
     .then(client => {
         console.log(`Connected to ${dbName} database`)
         db = client.db(dbName)
