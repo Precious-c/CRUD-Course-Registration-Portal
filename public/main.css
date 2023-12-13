@@ -1,9 +1,43 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Home Route */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200px !important;
+}
+.container a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    background-color: white;
+    border-radius: 20px;
+    height: 40px;
+    width: 132px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    padding: 0;
+    margin: 0;
+}
+.container a:hover {
+    color: white;
+    background-color: black;
+    transition: margin-right 0.5s, color 1s;
+}
+
 body{
+    font-family: 'Roboto', sans-serif;
     background-image: url(images/bg-1.jpg);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    height: 100vh;
 }
 .content {
     height: 584.875px;

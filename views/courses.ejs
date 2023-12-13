@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Course Registeration Portal</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <div class="content">
+        <div class="hero">
+            <h1>Course Registration Portal</h1>
+                <table border="5">
+                    <thead>
+                        <th width="200">Course Code</th>
+                        <th width="350">Courses Title</th>
+                        <th width="100">Credit Unit</th>
+                        <th width="100">Delete</th>
+                    </thead>
+                    <tbody>
+                        <% for(i = 0; i < info.length; i++){ %>
+                            <tr>
+                                <td> <%= info[i].courseCode %> </td>
+                                <td> <%= info[i].courseTitle %> </td>
+                                <td> <%= info[i].cr %> </td>
+                                <td> 
+                                    <span class="material-symbols-outlined deleteButton">
+                                    delete
+                                    </span> 
+                                </td>
+                            </tr>
+                        <% } %>
+                    </tbody>  
+                </table>
+            </div>
+            <br>
+            <form action="/registerCourse/addCourse" method="post">
+                <input type="text" placeholder="Course Code" name="courseCode" required>
+                <input type="text" placeholder="Course Title" name="courseTitle" required>
+                <input type="text" placeholder="Credit Load" name="cr" required>
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/courses.js"></script>
+</body>
+</html>
