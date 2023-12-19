@@ -35,12 +35,16 @@
                 </table>
             </div>
             <br>
-            <form action="/registerCourse/addCourse" method="post">
+            <p class="coursesLeft">Slots remaining: <span><%= emptySlots %></span></p>
+
+            <form action="/dashboard/addCourse" method="post">
                 <input type="text" placeholder="Course Code" name="courseCode" required>
                 <input type="text" placeholder="Course Title" name="courseTitle" required>
                 <input type="text" placeholder="Credit Load" name="cr" required>
                 <button type="submit">Add</button>
             </form>
+
+            <a class="logout" href="dashboard/logout">Logout</a>
         </div>
     </div>
     <script src="js/courses.js"></script>

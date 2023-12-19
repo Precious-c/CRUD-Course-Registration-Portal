@@ -5,7 +5,7 @@ Array.from(deleteItem).forEach(element => {element.addEventListener('click', del
 async function deleteRequest() {
     const courseTitle = this.parentNode.parentNode.children[1].innerText
     try {
-        const response = await fetch('/registerCourse/deleteCourse', {
+        const response = await fetch('/dashboard/deleteCourse', {
             method: 'delete',
             headers: {
                 'Content-Type': 'application/json'

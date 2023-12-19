@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 200px !important;
+    height: 20px !important;
 }
 .container a {
     font-family: 'Roboto', sans-serif;
@@ -30,6 +30,13 @@
     transition: margin-right 0.5s, color 1s;
 }
 
+.homepage-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
 body{
     font-family: 'Roboto', sans-serif;
     background-image: url(images/bg-1.jpg);
@@ -40,12 +47,17 @@ body{
     height: 100vh;
 }
 .content {
-    height: 584.875px;
+    display: flex;
+    flex-direction: column;
+    height: 630px;
     backdrop-filter: blur(5px); /* Adjust the blur amount as needed */
     padding: 20px;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.5); /* Adjust the background color and transparency as needed */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: Add a shadow for better visibility */
+}
+.indexPage {
+    height: 200px !important;
 }
 .hero {
     height: 515px;
@@ -83,7 +95,7 @@ input {
     border-radius: 8px;
     padding-left: 5px;
 }
-button{
+button, .logout{
     background: black;
     color: white;
     height: 31px;
@@ -92,7 +104,7 @@ button{
     border: none;
     font-size: 15px;
 }
-button:hover{
+button:hover, .logout:hover{
     cursor: pointer;
     background-color: white;
     color: black;
@@ -105,4 +117,44 @@ button:hover{
   'GRAD' 0,
   'opsz' 24
 }
+.logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    align-self:center;
+    margin-top: 15px;
+}
 
+/* create profile */
+.create-profile-container {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.create-profile-container form{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+label{
+    display: block;
+    margin-bottom: 2px;
+}
+
+form div {
+    margin-bottom: 10px;
+    width: 80%;
+}
+.create-profile-container input {
+    width: 100%;
+}
+
+.create-profile-container form button{
+    margin-top: 20px;
+}

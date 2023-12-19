@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const User = require('./User')
 
 const CourseSchema = new mongoose.Schema({
     courseCode: {
@@ -13,6 +14,10 @@ const CourseSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
+    registeredBy: {
+        type: String,
+        required: true
+    }, 
 })
 
 module.exports = mongoose.model('Course', CourseSchema)
